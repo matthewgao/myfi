@@ -1,9 +1,15 @@
 import akshare as ak
 import time
+import matplotlib.pyplot as plt
+import matplotlib
+
+plt.rcParams['font.sans-serif'] = ['Arial Unicode MS']
 
 # 统计一个星期 每天涨跌的概率
 from datetime import datetime
 all = ak.stock_zh_index_daily(symbol='sz399001')
+all.plot()
+plt.show()
 # print(all)
 mon_p_c = 0
 mon_n_c = 0
